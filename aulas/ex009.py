@@ -1,0 +1,34 @@
+n = int(input("Informe um número inteiro: "))
+a = n * 1
+b = n * 2
+c = n * 3
+d = n * 4
+e = n * 5
+f = n * 6
+g = n * 7
+h = n * 8
+i = n * 9
+j = n * 10
+z = 0
+print("-"*40)
+z = z + 1
+print("{} x {} = {}" .format(n, z, a))
+z = z + 1
+print("{} x {} = {}" .format(n, z, b))
+z = z + 1
+print("{} x {} = {}" .format(n, z, c))
+z = z + 1
+print("{} x {} = {}" .format(n, z, d))
+z = z + 1
+print("{} x {} = {}" .format(n, z, e))
+z = z + 1
+print("{} x {} = {}" .format(n, z, f))
+z = z + 1
+print("{} x {} = {}" .format(n, z, g))
+z = z + 1
+print("{} x {} = {}" .format(n, z, h))
+z = z + 1
+print("{} x {} = {}" .format(n, z, i))
+z = z + 1
+print("{} x {} = {}" .format(n, z, j))
+print("-"*40)
