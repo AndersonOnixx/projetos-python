@@ -1,36 +1,40 @@
 #atividade26
-print("_" * 72)
-print("\t" *7+ 'TABELA DE DESCONTO')
-print("_" * 72)
-print(" -------------------------------ÀLCOOL---------------------\n"
-      "|\t- 20 litros:                   |   desconto de 3%     |\n"
-      "|\t- Acima de 20 litros:          |   desconto de 5%     |\n"
-      "|\t --------------------------GASOLINA-------------------|\n"
-      "|\t- 20 litros:                   |   desconto de 4%     |\n"
-      "|\t- Acima de 20 litros :         |   desconto de 6%     |")
-print("-"*59)
-print("_" * 72)
-combustve = str(input("Qual o tipo de combustve:"))
-litro = float(input("Quantidade de Litros:"))
-if((combustve == "Alcool")and(litro <= 20)):
-    print("Tipo de combustve é Álcool")
-    percentual = 3
-    calculo1 = 2.50 * litro
-    calculo2 = calculo1 - 0.03
-elif((combustve == "Alcool")and(litro > 20)):
-    print("Tipo de combustve é Álcool")
-    percentual = 5
-    calculo1 = 2.50 * litro
-    calculo2 = calculo1 - 0.05
-elif((combustve == "Gasolina")and(litro <= 20)):
-    print("Tipo de combustve é Gasolina")
-    percentual = 4
-    calculo1 = 1.90 * litro
-    calculo2 = calculo1 - 0.04
-elif(combustve == "Gasolina" and litro > 20):
-    print("Tipo de combustve é Gasolina")
-    percentual = 6
-    calculo1 = 1.90 * litro
-    calculo2 = calculo1 - 0.06
-print("O percentual de desconto aplicado:{}%" .format(percentual))
-print("Valor a pagar:{:.2f}R$".format(calculo2))
+print("\t" * 5 + 'TABELA DE COMBUSTIVEL')
+print("_" * 58)
+print("Tipo de combustivel {}╏{} Numero comrespontende" .format(('\t' * 2), ('\t' * 2)))
+print("_" * 58)
+print("Álcool {}╏{} 1"      .format(('\t' * 6), ('\t' * 4)))
+print("Gasolina {}╏{} 2"    .format(('\t' * 5), ('\t' * 4)))
+print("_" * 58)
+combustivel = int(input("\nQual o tipo de combustve:"))
+if(combustivel == 1):
+    tipo_combustivel = "Àlcool"
+    print("")
+    print("\t" * 5 + "TABELA ÁLCOOL")
+    print("Litros{}╏{}Desconto"     .format(("\t" * 6), ("\t" * 3)))
+    print("20L {}╏{} 3%"            .format(("\t" * 6), ("\t" * 3)))
+    print("Acima de 20L {}╏{} 5%"   .format(("\t" * 4), ("\t" * 3)))
+    litro = float(input("Quantidade de Litros:"))
+    if (litro <= 20):
+        percentual = 3
+        valor_pagar = (2.50 * litro) - percentual / 100
+    else:
+        percentual = 5
+        valor_pagar = (2.50 * litro) - percentual / 100
+else:
+    tipo_combustivel = "Gasolina"
+    print("")
+    print("\t" * 5 + "TABELA GASOLINA")
+    print("Litros{}╏{}Desconto".format(("\t" * 6), ("\t" * 3)))
+    print("20L {}╏{} 4%".format(("\t" * 6), ("\t" * 3)))
+    print("Acima de 20L {}╏{} 6%".format(("\t" * 4), ("\t" * 3)))
+    litro = float(input("Quantidade de Litros:"))
+    if (litro <= 20):
+        percentual = 4
+        valor_pagar = (1.90 * litro) - percentual / 100
+    else:
+        percentual = 6
+        valor_pagar = (1.90 * litro) - percentual / 100
+print("\nTipo de combustivel                          {}".format(tipo_combustivel))
+print("O percentual de desconto aplicado            {}%" .format(percentual))
+print("Valor a pagar                                R$ {:.2f}".format(valor_pagar))
