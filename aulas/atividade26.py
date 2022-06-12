@@ -27,7 +27,7 @@ elif((combustve == "Gasolina")and(litro <= 20)):
     percentual = 4
     calculo1 = 1.90 * litro
     calculo2 = calculo1 - 0.04
-elif((combustve == "Gasolina")and(litro > 20)):
+elif(combustve == "Gasolina" and litro > 20):
     print("Tipo de combustve é Gasolina")
     percentual = 6
     calculo1 = 1.90 * litro
